@@ -1,0 +1,11 @@
+{
+  "name": "portfolio-workspace",
+  "version": "1.0.0",
+  "description": "Personal Developer Portfolio + Project Management System",
+  "scripts": {
+    "start": "node server/server.js",
+    "server": "npm --prefix server start",
+    "client": "npm --prefix client dev",
+    "seed": "npm --prefix server run seed"
+  }
+}
