@@ -58,6 +58,25 @@ const imageFileFilter = (req, file, cb) => {
   }
 };
 
+// PDF resume storage configuration
+const resumeStorage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, uploadDir);
+  },
+  filename: (req, file, cb) => {
+    cb(null, 'resume.pdf');
+  }
+});
+
+const pdfFileFilter = (req, file, cb) => {
+  const ext = path.extname(file.originalname).toLowerCase();
+  if (ext === '.pdf' || file.mimetype === 'application/pdf') {
+    cb(null, true);
+  } else {
+    cb(new Error('Only PDF files are allowed for resume!'), false);
+  }
+};
+
 const uploadZip = multer({
   storage: zipStorage,
   fileFilter: zipFileFilter,
@@ -70,4 +89,11 @@ const uploadImage = multer({
   limits: { fileSize: 5 * 1024 * 1024 } // 5 MB limit
 });
 
-module.exports = { uploadZip, uploadImage };
+const uploadResume = multer({
+  storage: resumeStorage,
+  fileFilter: pdfFileFilter,
+  limits: { fileSize: 10 * 1024 * 1024 } // 10 MB limit
+});
+
+module.exports = { uploadZip, uploadImage, uploadResume };
+

@@ -8,6 +8,7 @@ import HomePage from './pages/HomePage';
 import ProjectDetailPage from './pages/ProjectDetailPage';
 import AdminLoginPage from './pages/AdminLoginPage';
 import AdminDashboardPage from './pages/AdminDashboardPage';
+import InteractiveBackground from './components/common/InteractiveBackground';
 
 function App() {
   const [toast, setToast] = useState({ message: '', type: 'success' });
@@ -23,6 +24,7 @@ function App() {
     <ThemeProvider>
       <AuthProvider>
         <Router>
+          <InteractiveBackground />
           <Toast
             message={toast.message}
             type={toast.type}

@@ -7,11 +7,11 @@ const SkillsSection = ({ categorizedSkills }) => {
 
   const getCategoryIcon = (cat) => {
     switch (cat) {
-      case 'Frontend': return <Code size={18} />;
-      case 'Backend': return <Server size={18} />;
-      case 'Database': return <Database size={18} />;
-      case 'Tools': return <Wrench size={18} />;
-      default: return <Layers size={18} />;
+      case 'Frontend': return <Code size={17} />;
+      case 'Backend': return <Server size={17} />;
+      case 'Database': return <Database size={17} />;
+      case 'Tools': return <Wrench size={17} />;
+      default: return <Layers size={17} />;
     }
   };
 
@@ -26,10 +26,10 @@ const SkillsSection = ({ categorizedSkills }) => {
   const currentSkills = getSkillsToDisplay();
 
   return (
-    <section id="skills" className="section" style={{ background: 'var(--bg-secondary)' }}>
+    <section id="skills" className="section" style={{ background: 'var(--bg-secondary)', position: 'relative', zIndex: 1 }}>
       <div className="container">
         <h2 className="section-title">Technical <span className="gradient-text">Skills</span></h2>
-        <p className="section-subtitle">Technologies, frameworks, and tools I use to bring projects to life</p>
+        <p className="section-subtitle">Technologies, frameworks, and programming languages I use to build scalable systems</p>
 
         {/* Category Tabs */}
         <div style={{
@@ -46,7 +46,7 @@ const SkillsSection = ({ categorizedSkills }) => {
               className={`btn btn-sm ${activeCategory === cat ? 'btn-primary' : 'btn-secondary'}`}
               style={{
                 borderRadius: 'var(--radius-full)',
-                padding: '0.5rem 1.25rem'
+                padding: '0.5rem 1.35rem'
               }}
             >
               {getCategoryIcon(cat)}
@@ -58,7 +58,7 @@ const SkillsSection = ({ categorizedSkills }) => {
         {/* Skills Grid */}
         <div style={{
           display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(240px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr))',
           gap: '1.25rem'
         }}>
           {currentSkills.map((skill) => (
@@ -71,23 +71,25 @@ const SkillsSection = ({ categorizedSkills }) => {
             }}>
               <div style={{ display: 'flex', alignItems: 'center', gap: '0.85rem' }}>
                 <div style={{
-                  width: '36px',
-                  height: '36px',
+                  width: '38px',
+                  height: '38px',
                   borderRadius: 'var(--radius-sm)',
                   background: 'var(--badge-bg)',
-                  color: 'var(--accent-primary)',
+                  color: 'var(--accent-secondary)',
+                  border: '1px solid var(--badge-border)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontWeight: 700
+                  fontWeight: 800,
+                  fontSize: '1rem'
                 }}>
                   {skill.name.charAt(0)}
                 </div>
                 <div>
-                  <h4 style={{ fontSize: '1rem', fontWeight: 600, color: 'var(--text-primary)' }}>
+                  <h4 style={{ fontSize: '1rem', fontWeight: 700, color: 'var(--text-primary)' }}>
                     {skill.name}
                   </h4>
-                  <span style={{ fontSize: '0.75rem', color: 'var(--text-muted)' }}>
+                  <span style={{ fontSize: '0.78rem', color: 'var(--text-muted)' }}>
                     {skill.category}
                   </span>
                 </div>
@@ -95,14 +97,16 @@ const SkillsSection = ({ categorizedSkills }) => {
 
               {/* Proficiency Pill */}
               <div style={{
-                fontSize: '0.8rem',
+                fontSize: '0.82rem',
                 fontWeight: 700,
-                color: 'var(--accent-primary)',
-                background: 'rgba(139, 92, 246, 0.1)',
-                padding: '3px 8px',
-                borderRadius: 'var(--radius-sm)'
+                color: 'var(--accent-secondary)',
+                background: 'var(--badge-bg)',
+                border: '1px solid var(--badge-border)',
+                padding: '3px 9px',
+                borderRadius: 'var(--radius-full)',
+                fontFamily: 'var(--font-mono)'
               }}>
-                {skill.proficiency || 80}%
+                {skill.proficiency || 85}%
               </div>
             </div>
           ))}

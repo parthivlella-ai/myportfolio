@@ -989,6 +989,7 @@ const AdminDashboardPage = ({ onShowToast }) => {
                   type="text"
                   value={profileForm.linkedinUrl}
                   onChange={(e) => setProfileForm(prev => ({ ...prev, linkedinUrl: e.target.value }))}
+                  placeholder="https://www.linkedin.com/in/parthiv-reddy-1608a33a3"
                   className="form-control"
                 />
               </div>
@@ -999,11 +1000,48 @@ const AdminDashboardPage = ({ onShowToast }) => {
                   type="text"
                   value={profileForm.resumeUrl}
                   onChange={(e) => setProfileForm(prev => ({ ...prev, resumeUrl: e.target.value }))}
+                  placeholder="/resume.pdf or https://drive.google.com/..."
                   className="form-control"
+                />
+                <span style={{ fontSize: '0.8rem', color: 'var(--text-muted)', display: 'block', marginTop: '0.35rem' }}>
+                  Default is <code>/resume.pdf</code>. You can also upload your own resume PDF file below:
+                </span>
+              </div>
+
+              {/* Upload New Resume PDF File */}
+              <div style={{
+                background: 'var(--bg-surface)',
+                border: '1px dashed var(--border-color)',
+                borderRadius: 'var(--radius-sm)',
+                padding: '1rem',
+                marginBottom: '1.25rem'
+              }}>
+                <label className="form-label" style={{ marginBottom: '0.5rem' }}>Upload Custom Resume (PDF)</label>
+                <input
+                  type="file"
+                  accept="application/pdf"
+                  onChange={async (e) => {
+                    const file = e.target.files[0];
+                    if (!file) return;
+                    const formData = new FormData();
+                    formData.append('resumeFile', file);
+                    try {
+                      const res = await api.post('/profile/resume', formData, {
+                        headers: { 'Content-Type': 'multipart/form-data' }
+                      });
+                      if (res.data.success) {
+                        setProfileForm(prev => ({ ...prev, resumeUrl: '/resume.pdf' }));
+                        if (onShowToast) onShowToast('Resume PDF uploaded successfully!', 'success');
+                      }
+                    } catch (err) {
+                      if (onShowToast) onShowToast(err.response?.data?.message || 'Failed to upload PDF resume.', 'error');
+                    }
+                  }}
+                  style={{ fontSize: '0.9rem', color: 'var(--text-primary)' }}
                 />
               </div>
 
-              <button type="submit" disabled={updatingProfile} className="btn btn-primary" style={{ marginTop: '1rem' }}>
+              <button type="submit" disabled={updatingProfile} className="btn btn-primary" style={{ marginTop: '0.5rem' }}>
                 {updatingProfile ? 'Saving...' : 'Save Profile Settings'}
               </button>
             </form>

@@ -124,10 +124,50 @@ const deleteEducation = async (req, res) => {
   }
 };
 
+// @desc    Upload Resume PDF (Admin)
+// @route   POST /api/profile/resume
+// @access  Private (Admin)
+const uploadResumeFile = async (req, res) => {
+  try {
+    if (!req.file) {
+      return res.status(400).json({ success: false, message: 'Please upload a PDF resume file.' });
+    }
+
+    const fs = require('fs');
+    const path = require('path');
+
+    // Also copy to client/public/resume.pdf so it is served locally
+    const clientPublicResume = path.join(__dirname, '../../client/public/resume.pdf');
+    try {
+      fs.copyFileSync(req.file.path, clientPublicResume);
+    } catch (e) {
+      console.warn('Could not copy to client public folder:', e.message);
+    }
+
+    let profile = await Profile.findOne();
+    if (!profile) {
+      profile = new Profile({ resumeUrl: '/resume.pdf' });
+    } else {
+      profile.resumeUrl = '/resume.pdf';
+    }
+    await profile.save();
+
+    res.json({
+      success: true,
+      resumeUrl: '/resume.pdf',
+      message: 'Resume PDF uploaded and saved successfully!'
+    });
+  } catch (error) {
+    res.status(500).json({ success: false, message: error.message });
+  }
+};
+
 module.exports = {
   getProfile,
   updateProfile,
   createEducation,
   updateEducation,
-  deleteEducation
+  deleteEducation,
+  uploadResumeFile
 };
+

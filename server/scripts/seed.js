@@ -44,7 +44,7 @@ const seedData = async () => {
       email: 'parthivlella@gmail.com',
       githubUrl: 'https://github.com/parthivlella-ai',
       linkedinUrl: 'https://www.linkedin.com/in/parthiv-reddy-1608a33a3',
-      resumeUrl: '#',
+      resumeUrl: '/resume.pdf',
       location: 'Chilakaluripet, Palnadu, Andhra Pradesh, India'
     });
 
@@ -156,27 +156,6 @@ const seedData = async () => {
         sourceType: 'github',
         sourceUrl: 'https://github.com/parthivlella-ai/File-storage',
         stars: 15
-      },
-      {
-        title: 'AI-Based Student Performance Prediction System',
-        slug: 'ai-student-performance-prediction',
-        shortDescription: 'Machine learning & Django web application for predicting student academic performance.',
-        fullDescription: 'An intelligent educational analytical tool that predicts student academic performance based on historical data. Implemented data preprocessing, feature engineering, and model evaluation achieving 80%+ accuracy, packaged inside a Django web interface with report generation.',
-        problemStatement: 'Early identification of academic performance trends to provide targeted support to students.',
-        features: [
-          'Machine learning predictive model built with Python, Scikit-learn, and Pandas',
-          'Extensive data preprocessing and feature engineering achieving 80%+ accuracy',
-          'Interactive Django web interface for visualizing student report analytics'
-        ],
-        technologies: ['Python', 'Scikit-learn', 'Pandas', 'Django', 'HTML/CSS'],
-        githubUrl: 'https://github.com/parthivlella-ai',
-        liveUrl: '',
-        image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1200&q=80',
-        category: 'Backend',
-        featured: true,
-        sourceType: 'manual',
-        sourceUrl: '',
-        stars: 8
       }
     ];
 
