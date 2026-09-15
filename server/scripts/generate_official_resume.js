@@ -1,20 +1,10 @@
-%PDF-1.4
-1 0 obj
-<< /Type /Catalog /Pages 2 0 R >>
-endobj
-2 0 obj
-<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
-endobj
-3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
-endobj
-4 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
-endobj
-5 0 obj
-<< /Length 3905 >>
-stream
-BT
+const fs = require('fs');
+const path = require('path');
+
+function generateExactResumePdf() {
+  // Page 1 content
+  const page1Stream = 
+`BT
 /F1 18 Tf
 0 0.3 0.6 rg
 50 780 Td
@@ -175,13 +165,11 @@ BT
 0 -13 Td
 (  * Applied custom animations, glassmorphism, responsive flexbox/grid, and MongoDB project management.) Tj
 ET
+`;
 
-endstream
-endobj
-6 0 obj
-<< /Length 1947 >>
-stream
-BT
+  // Page 2 content
+  const page2Stream =
+`BT
 0 0.25 0.5 rg
 /F1 11 Tf
 50 780 Td
@@ -295,28 +283,72 @@ BT
 /F1 10 Tf
 (( Lella Parthiv Reddy )) Tj
 ET
+`;
 
-endstream
-endobj
-7 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
-endobj
-8 0 obj
-<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
-endobj
-xref
-0 9
-0000000000 65535 f 
-0000000009 00000 n 
-0000000058 00000 n 
-0000000121 00000 n 
-0000000257 00000 n 
-0000000393 00000 n 
-0000004350 00000 n 
-0000006349 00000 n 
-0000006424 00000 n 
-trailer
-<< /Size 9 /Root 1 0 R >>
-startxref
-6494
-%%EOF
+  const len1 = Buffer.byteLength(page1Stream, 'utf-8');
+  const len2 = Buffer.byteLength(page2Stream, 'utf-8');
+
+  let pdf = `%PDF-1.4\n`;
+  const offsets = [];
+
+  // Object 1: Catalog
+  offsets.push(pdf.length);
+  pdf += `1 0 obj\n<< /Type /Catalog /Pages 2 0 R >>\nendobj\n`;
+
+  // Object 2: Pages
+  offsets.push(pdf.length);
+  pdf += `2 0 obj\n<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>\nendobj\n`;
+
+  // Object 3: Page 1
+  offsets.push(pdf.length);
+  pdf += `3 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>\nendobj\n`;
+
+  // Object 4: Page 2
+  offsets.push(pdf.length);
+  pdf += `4 0 obj\n<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>\nendobj\n`;
+
+  // Object 5: Stream Page 1
+  offsets.push(pdf.length);
+  pdf += `5 0 obj\n<< /Length ${len1} >>\nstream\n${page1Stream}\nendstream\nendobj\n`;
+
+  // Object 6: Stream Page 2
+  offsets.push(pdf.length);
+  pdf += `6 0 obj\n<< /Length ${len2} >>\nstream\n${page2Stream}\nendstream\nendobj\n`;
+
+  // Object 7: Font Bold
+  offsets.push(pdf.length);
+  pdf += `7 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>\nendobj\n`;
+
+  // Object 8: Font Regular
+  offsets.push(pdf.length);
+  pdf += `8 0 obj\n<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>\nendobj\n`;
+
+  // Xref
+  const startXref = pdf.length;
+  pdf += `xref\n0 9\n0000000000 65535 f \n`;
+  for (const offset of offsets) {
+    pdf += `${String(offset).padStart(10, '0')} 00000 n \n`;
+  }
+
+  pdf += `trailer\n<< /Size 9 /Root 1 0 R >>\nstartxref\n${startXref}\n%%EOF\n`;
+
+  return Buffer.from(pdf, 'utf-8');
+}
+
+const clientPublicDir = path.join(__dirname, '../../client/public');
+if (!fs.existsSync(clientPublicDir)) {
+  fs.mkdirSync(clientPublicDir, { recursive: true });
+}
+
+const uploadsDir = path.join(__dirname, '../uploads');
+if (!fs.existsSync(uploadsDir)) {
+  fs.mkdirSync(uploadsDir, { recursive: true });
+}
+
+const pdfBuffer = generateExactResumePdf();
+
+fs.writeFileSync(path.join(clientPublicDir, 'resume.pdf'), pdfBuffer);
+fs.writeFileSync(path.join(clientPublicDir, 'Parthiv_Reddy_Resume.pdf'), pdfBuffer);
+fs.writeFileSync(path.join(uploadsDir, 'resume.pdf'), pdfBuffer);
+
+console.log('Successfully updated Parthiv Reddy 2-page resume at client/public/resume.pdf and uploads');

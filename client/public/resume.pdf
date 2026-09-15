@@ -3,79 +3,320 @@
 << /Type /Catalog /Pages 2 0 R >>
 endobj
 2 0 obj
-<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+<< /Type /Pages /Kids [3 0 R 4 0 R] /Count 2 >>
 endobj
 3 0 obj
-<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 4 0 R /Resources << /Font << /F1 5 0 R >> >> >>
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 5 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
 endobj
 4 0 obj
-<< /Length 1497 >>
-stream
-BT
-/F1 20 Tf
-50 750 Td
-(LELLA PARTHIV REDDY) Tj
-0 -26 Td
-/F1 12 Tf
-(Full Stack Developer | B.Tech Computer Science | parthivlella@gmail.com) Tj
-0 -18 Td
-(LinkedIn: https://www.linkedin.com/in/parthiv-reddy-1608a33a3 | GitHub: https://github.com/parthivlella-ai) Tj
-0 -30 Td
-/F1 14 Tf
-(EDUCATION) Tj
-0 -18 Td
-/F1 11 Tf
-(1. B.Tech in CSE - Vignan's Foundation for Science, Tech & Research (VFSTR) [2024 - 2028] - CGPA: 8.0/10) Tj
-0 -16 Td
-(2. Intermediate MPC - Sri Chaitanya Junior College [2022 - 2024] - 94%) Tj
-0 -16 Td
-(3. SSC 10th Grade - Modern Stellar [2021 - 2022] - 91%) Tj
-0 -28 Td
-/F1 14 Tf
-(TECHNICAL SKILLS) Tj
-0 -18 Td
-/F1 11 Tf
-(Languages: Python, JavaScript (ES6+), Java, C, SQL) Tj
-0 -16 Td
-(Frontend: React.js, HTML5, CSS3, Responsive Web Design, Vite) Tj
-0 -16 Td
-(Backend: Node.js, Express.js, Django, REST APIs, WebSockets) Tj
-0 -16 Td
-(Databases: MongoDB, Mongoose, SQL) Tj
-0 -16 Td
-(Tools & Platforms: Git, GitHub, VS Code, Postman, Vercel) Tj
-0 -28 Td
-/F1 14 Tf
-(FEATURED PROJECTS) Tj
-0 -18 Td
-/F1 11 Tf
-(1. Real-Time Chat Application [React, Node.js, Express, Socket.io, MongoDB]) Tj
-0 -14 Td
-(   - Live: https://chat-application-navy-chi.vercel.app/) Tj
-0 -14 Td
-(   - GitHub: https://github.com/parthivlella-ai/chat-application-) Tj
-0 -18 Td
-(2. Cloud File Storage Application [React, Node.js, Express, Multer, MongoDB]) Tj
-0 -14 Td
-(   - Live: https://file-storage-omega-three.vercel.app/) Tj
-0 -14 Td
-(   - GitHub: https://github.com/parthivlella-ai/File-storage) Tj
-ET
-endstream
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Contents 6 0 R /Resources << /Font << /F1 7 0 R /F2 8 0 R >> >> >>
 endobj
 5 0 obj
+<< /Length 3905 >>
+stream
+BT
+/F1 18 Tf
+0 0.3 0.6 rg
+50 780 Td
+(LELLA PARTHIV REDDY) Tj
+0 -18 Td
+0 0 0 rg
+/F1 10 Tf
+(B.Tech - Computer Science and Engineering | VFSTR, India) Tj
+0 -14 Td
+/F2 9 Tf
+(Phone: 7981685660 | Email: parthivlella@gmail.com | LinkedIn: linkedin.com/in/parthiv-reddy-1608a33a3) Tj
+0 -12 Td
+(Address: 205 Dasari Mansion, CR Colony, Chilakaluripet, Palnadu, Andhra Pradesh, India) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 722 m 545 722 l S
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 706 Td
+(PROFESSIONAL SUMMARY) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 700 m 545 700 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 686 Td
+(Highly motivated B.Tech student specializing in Computer Science and Engineering at Vignan Foundation for) Tj
+0 -13 Td
+(Science Research and Technology (CGPA: 8.0/10). Passionate about Python programming, and intelligent system) Tj
+0 -13 Td
+(development. Proficient in full-stack web technologies and experienced in building data-driven applications.) Tj
+0 -13 Td
+(Seeking an internship or entry-level role to apply technical skills and contribute to innovative technology solutions.) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 626 Td
+(EDUCATION) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 620 m 545 620 l S
+
+BT
+0 0 0 rg
+/F1 9.5 Tf
+50 606 Td
+(B.Tech in Computer Science and Engineering | CGPA: 8.0 / 10) Tj
+0 -13 Td
+/F2 9 Tf
+(Vignan Foundation for Science Research and Technology (VFSTR), India  |  2024 - 2028 (Pursuing)) Tj
+0 -16 Td
+/F1 9.5 Tf
+(Intermediate - MPC (Mathematics, Physics, Chemistry) | 94%) Tj
+0 -13 Td
+/F2 9 Tf
+(Sri Chaitanya Junior College  |  2022 - 2024) Tj
+0 -16 Td
+/F1 9.5 Tf
+(SSC (10th Grade) | 91%) Tj
+0 -13 Td
+/F2 9 Tf
+(Modern Stellar, Chilakaluripet  |  2021 - 2022) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 496 Td
+(TECHNICAL SKILLS) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 490 m 545 490 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 472 Td
+(  * Python Programming                - Advanced) Tj
+0 -14 Td
+(  * Java Programming                  - Intermediate) Tj
+0 -14 Td
+(  * C Programming                     - Proficient) Tj
+0 -14 Td
+(  * HTML5 / CSS3                      - Proficient) Tj
+0 -14 Td
+(  * JavaScript (ES6+, React.js)       - Intermediate) Tj
+0 -14 Td
+(  * Django Framework / Node.js        - Proficient) Tj
+0 -14 Td
+(  * Data Science & ML                 - Intermediate) Tj
+0 -14 Td
+(  * SQL / Databases & MongoDB         - Intermediate) Tj
+0 -14 Td
+(  * Git & GitHub                      - Intermediate) Tj
+0 -14 Td
+(  * MS Office Suite                   - Advanced) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 310 Td
+(PROJECTS) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 304 m 545 304 l S
+
+BT
+0 0 0 rg
+/F1 9.5 Tf
+50 288 Td
+(Real-Time Chat Application) Tj
+0 -13 Td
+/F2 9 Tf
+(Technologies: React.js, Node.js, Express, MongoDB, Socket.IO, Vercel) Tj
+0 -13 Td
+(  * Built a feature-rich real-time messaging platform with instant socket communication.) Tj
+0 -13 Td
+(  * Implemented secure user authentication, responsive modern UI, and deployed live on Vercel.) Tj
+0 -13 Td
+(  * Live: https://chat-application-navy-chi.vercel.app/  |  GitHub: github.com/parthivlella-ai/chat-application-) Tj
+0 -18 Td
+/F1 9.5 Tf
+(Cloud File Storage Application) Tj
+0 -13 Td
+/F2 9 Tf
+(Technologies: React.js, Node.js, Express, MongoDB, Multer, Vercel) Tj
+0 -13 Td
+(  * Full-stack cloud file management application allowing users to upload, organize, and preview files.) Tj
+0 -13 Td
+(  * Implemented file categorization, storage analytics, and direct secure sharing links.) Tj
+0 -13 Td
+(  * Live: https://file-storage-omega-three.vercel.app/  |  GitHub: github.com/parthivlella-ai/File-storage) Tj
+0 -18 Td
+/F1 9.5 Tf
+(Personal Developer Portfolio Website) Tj
+0 -13 Td
+/F2 9 Tf
+(Technologies: React, Node.js, Express, MongoDB, CSS3, JavaScript) Tj
+0 -13 Td
+(  * Designed and developed a responsive developer portfolio showcasing projects, skills, and admin dashboard.) Tj
+0 -13 Td
+(  * Applied custom animations, glassmorphism, responsive flexbox/grid, and MongoDB project management.) Tj
+ET
+
+endstream
+endobj
+6 0 obj
+<< /Length 1947 >>
+stream
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 780 Td
+(CERTIFICATIONS & COURSES) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 774 m 545 774 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 756 Td
+(  * Introduction to Python - NPTEL / Swayam) Tj
+0 -15 Td
+(  * Web Development Bootcamp (HTML, CSS, JavaScript) - Udemy) Tj
+0 -15 Td
+(  * MS Office Specialist (MOS) - Microsoft) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 690 Td
+(CORE COMPETENCIES & SOFT SKILLS) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 684 m 545 684 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 666 Td
+(  * Analytical & Problem-Solving Thinking            * Team Collaboration & Adaptability) Tj
+0 -15 Td
+(  * Effective Communication (English & Telugu)        * Time Management & Deadline Oriented) Tj
+0 -15 Td
+(  * Self-Motivated & Quick Learner                    * Creativity & UI/UX Design Sensibility) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 598 Td
+(LANGUAGES) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 592 m 545 592 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 574 Td
+(  * Telugu  - Native / Fluent) Tj
+0 -15 Td
+(  * English - Professional Working Proficiency (Read, Write & Speak)) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 514 Td
+(HOBBIES & INTERESTS) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 508 m 545 508 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 490 Td
+(  * Competitive Coding & Algorithm Problem Solving (LeetCode, HackerEarth)) Tj
+0 -15 Td
+(  * Graphic Designing & Digital Art) Tj
+0 -15 Td
+(  * Exploring new AI tools, frameworks, and emerging technologies) Tj
+ET
+
+BT
+0 0.25 0.5 rg
+/F1 11 Tf
+50 420 Td
+(DECLARATION) Tj
+ET
+
+0.8 0.8 0.8 RG
+1 w
+50 414 m 545 414 l S
+
+BT
+0 0 0 rg
+/F2 9.5 Tf
+50 396 Td
+(I hereby declare that all the information provided in this resume is true and correct to the best of my knowledge) Tj
+0 -14 Td
+(and belief. I take full responsibility for the authenticity of the details mentioned above.) Tj
+0 -30 Td
+(Place: Palnadu, Andhra Pradesh) Tj
+0 -16 Td
+(Date:  _________________________) Tj
+0 -26 Td
+(Signature: _____________________) Tj
+0 -16 Td
+/F1 10 Tf
+(( Lella Parthiv Reddy )) Tj
+ET
+
+endstream
+endobj
+7 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica-Bold >>
+endobj
+8 0 obj
 << /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
 endobj
 xref
-0 6
+0 9
 0000000000 65535 f 
 0000000009 00000 n 
 0000000058 00000 n 
-0000000115 00000 n 
-0000000241 00000 n 
-0000001790 00000 n 
+0000000121 00000 n 
+0000000257 00000 n 
+0000000393 00000 n 
+0000004350 00000 n 
+0000006349 00000 n 
+0000006424 00000 n 
 trailer
-<< /Size 6 /Root 1 0 R >>
+<< /Size 9 /Root 1 0 R >>
 startxref
-1860
+6494
 %%EOF
