@@ -6,50 +6,7 @@ import Navbar from '../components/common/Navbar';
 import Footer from '../components/common/Footer';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 
-const fallbackProjects = [
-  {
-    _id: 'default-chat-app',
-    title: 'Real-Time Chat Application',
-    slug: 'real-time-chat-app',
-    shortDescription: 'Modern real-time messaging application deployed on Vercel.',
-    fullDescription: 'A feature-rich real-time communication platform designed for instant messaging and seamless online collaboration. Built with React and Node.js backend services, featuring instant message dispatching, user session security, and dark theme UI.',
-    problemStatement: 'Providing lightweight, fast, and responsive real-time messaging without complex desktop installation.',
-    features: [
-      'Instant messaging with real-time web socket connections',
-      'Secure user authentication and chat room management',
-      'Responsive UI optimized for desktop and mobile devices',
-      'Deployed live on Vercel cloud hosting'
-    ],
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'Vercel'],
-    githubUrl: 'https://github.com/parthivlella-ai/chat-application-',
-    liveUrl: 'https://chat-application-navy-chi.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1611746872915-64382b5c76da?auto=format&fit=crop&w=1200&q=80',
-    category: 'Full Stack',
-    featured: true,
-    stars: 12
-  },
-  {
-    _id: 'default-file-storage',
-    title: 'Cloud File Storage Application',
-    slug: 'cloud-file-storage-app',
-    shortDescription: 'Full-stack cloud file management application deployed on Vercel.',
-    fullDescription: 'A complete web file management system allowing users to securely upload, categorize, preview, and share documents online. Built with a React frontend and Express backend, featuring extension validation and storage analytics.',
-    problemStatement: 'User-friendly cloud document management with fast access and file categorization.',
-    features: [
-      'Secure document upload and folder categorization',
-      'Search and filter files by name and file extension',
-      'Storage analytics and direct document download links',
-      'Deployed live on Vercel cloud hosting'
-    ],
-    technologies: ['React', 'Node.js', 'Express', 'MongoDB', 'Multer', 'Vercel'],
-    githubUrl: 'https://github.com/parthivlella-ai/File-storage',
-    liveUrl: 'https://file-storage-omega-three.vercel.app/',
-    image: 'https://images.unsplash.com/photo-1544396821-4dd40b938ad3?auto=format&fit=crop&w=1200&q=80',
-    category: 'Full Stack',
-    featured: true,
-    stars: 15
-  }
-];
+import { defaultProjects as fallbackProjects } from '../data/projectsData';
 
 const ProjectDetailPage = () => {
   const { idOrSlug } = useParams();
